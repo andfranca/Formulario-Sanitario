@@ -1,0 +1,132 @@
+Contexto e papel do modelo
+
+Você é um engenheiro de software sênior responsável por desenvolver um sistema web operacional para vigilância sanitária em pontos de entrada (aeroportos e portos).
+
+O sistema deve ser simples, rápido, confiável e utilizável em ambiente real por fiscais.
+
+Objetivo
+
+Desenvolver o SIVIG - Sistema Integrado de Vigilância Sanitária, com foco em
+
+Triagem epidemiológica
+Registro de viajantes
+Identificação automática de risco
+Regras Gerais (CRÍTICO)
+Gere código completo, funcional e executável
+NÃO use pseudo-código
+NÃO omita trechos
+NÃO dividir em múltiplos arquivos
+Deve rodar com python main.py
+Armazenamento em memória (sem banco de dados)
+Código limpo e direto
+Arquitetura
+Backend
+Python + FastAPI
+Lista em memória para registros
+Frontend
+HTML5 + Tailwind CSS
+Alpine.js
+Aplicação Single Page (SPA)
+Layout (IMPORTANTE)
+Estrutura
+Menu horizontal fixo no topo
+Conteúdo dinâmico abaixo (sem reload)
+Navegação controlada via Alpine.js
+Menu superior
+
+Itens
+
+Registro de Inspeção (default)
+Sobre o SIVIG
+Guia de Preenchimento
+Identidade Visual
+Cor principal #004782
+Estilo institucional (inspirado em sistemas governamentais)
+Layout limpo e espaçado
+Foco em leitura rápida (uso em operação real)
+Funcionalidades
+1. Registro de Inspeção
+Formulário
+
+Dados do Viajante
+
+Nome Completo (obrigatório)
+Passaporte (obrigatório)
+Telefone (com máscara brasileira)
+Email (validação básica)
+
+Dados de Trânsito
+
+País de Procedência (dropdown simples)
+Número do vooembarcação
+
+Triagem Epidemiológica
+
+Febretossedificuldade respiratória (SimNão)
+Contato com caso suspeitoconfirmado (SimNão)
+Regras de Negócio
+
+Classificar como ALERTA SANITÁRIO se
+
+Qualquer resposta da triagem = Sim
+OU
+País ∈ {China, Itália, Irã}
+Pós-envio (CRÍTICO)
+
+Após envio do formulário
+
+Limpar os campos automaticamente
+Exibir mensagem visível no topo ou acima do formulário
+
+Informações cadastradas com sucesso
+
+A mensagem deve
+Ter destaque visual (ex fundo verde claro)
+Desaparecer automaticamente após alguns segundos
+OU permitir fechamento manual
+Exibição dos Registros
+Tabela abaixo do formulário
+Atualização dinâmica (sem reload)
+Registros com ALERTA
+Fundo amarelo (bg-yellow-100)
+Badge vermelho pulsante com texto ALERTA
+Ícone de atenção
+Outras Telas (SPA)
+Sobre o SIVIG
+
+Texto explicando
+
+Objetivo do sistema
+Uso na vigilância sanitária
+Contexto operacional
+Guia de Preenchimento
+
+Instruções práticas
+
+Como coletar dados corretamente
+Cuidados na abordagem ao viajante
+Requisitos Técnicos
+Tudo em um único arquivo main.py
+HTML embutido no FastAPI
+Tailwind via CDN
+Alpine.js via CDN
+Uso de fetch para envio do formulário (sem reload)
+Datas no padrão brasileiro (DDMMAAAA)
+Código simples e direto (evitar complexidade desnecessária)
+Qualidade Esperada
+Interface rápida e responsiva
+Fluxo claro preencher → enviar → feedback → tabela atualizada
+Código legível e auditável
+Pronto para demonstração
+Entrega
+
+Gerar um único arquivo
+
+main.py
+
+Contendo
+
+Backend (FastAPI)
+HTML completo
+JS (Alpine.js)
+Estilo (Tailwind)
